@@ -31,3 +31,10 @@ Additional Docker Commands:
 - `touch filename`: Creates a new file in Linux
 - `cd ..`: Goes back to the previous folder
 - `docker exec -it <redis_container_name_or_id> redis-cli FLUSHALL` : This command will connect to the Redis server within the container and remove all data. The container will continue running with an empty Redis database.
+
+
+docker run --name mysql-b2c-settings \
+  -e MYSQL_ROOT_PASSWORD=root \
+  -e MYSQL_DATABASE=b2c-settings \
+  -p 3306:3306 \
+  -d mysql:latest
